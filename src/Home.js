@@ -28,7 +28,6 @@ export default class Home extends React.Component {
 
     render () {
         let component
-        console.log(this.props.match.params.id)
         if (this.state.componentToRender === 'Login')
             component = <Login />
             else component = <Register />
