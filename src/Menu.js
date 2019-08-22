@@ -16,6 +16,9 @@ const Menu = () => {
         <li className='nav-item' id='login'>
             <Link className='nav-link' to='/login'>Login</Link>
         </li>
+        <li className='nav-item' id='login'>
+            <Link className='nav-link' to='/fav'>Favorites</Link>
+        </li>
     </ul>
 }
 

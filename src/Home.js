@@ -1,6 +1,7 @@
 import React from 'react'
 import Login from './loginComponents/Login.js'
 import Register from './loginComponents/Register.js'
+import Recepies from './Recepies.js'
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -39,6 +40,8 @@ export default class Home extends React.Component {
             <button id='switchComponent' onClick={this.switch}>
                 {this.state.buttonText}
             </button>
+
+            <Recepies />
         </div>
     }
 }
