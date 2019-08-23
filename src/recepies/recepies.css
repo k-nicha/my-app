@@ -1,0 +1,15 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    flex-direction: row;
+}
+
+.flex-item {
+    padding: 10px;
+    margin: 10px;
+    background-color: #dddfff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px #dddfff;
+}

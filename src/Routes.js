@@ -4,18 +4,18 @@ import { BrowserRouter as Router, Route, Switch }
 import Home from './Home.js'
 import Menu from './Menu.js'
 import LoggedInAs from './loginComponents/LoggedInAs.js'
-import Favorites from './Favorites'
+import Favorites from './recepies/Favorites.js'
+import Recepies from './recepies/Recepies.js'
 
 const Routes = () => {
     return (
         <Router>
-            
             <Menu />
             <Switch>
-                <Route exact path='/' component={null} />
+                <Route exact path='/' component={Recepies} />
+                <Route exact path='/fav' component={Favorites} />
                 <Route exact path='/login' component={Home} />
                 <Route exact path='/main' component={LoggedInAs} />
-                <Route exact path='/fav' component={Favorites} />
                 <Route exact component={PathError} />
             </Switch>
             
