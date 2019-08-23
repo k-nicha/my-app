@@ -1,13 +1,29 @@
 import React from 'react'
+import SingleRecepie from './SingleRecepie'
 import { connect } from 'react-redux'
 
-const Favorites = () => {
-    return <div> test </div>
+const Favorites = (props) => {
+    let emptyList = ''
+    const components = props.favorites.map((element) => {
+        return <SingleRecepie
+            key={element.key}
+            description={element.description}
+        />
+    })
+
+    if (components.length < 1) {
+        emptyList = 'You have no favorite recepies'
+    }
+    
+    return <div>
+        {emptyList}
+        {components}
+    </div>
 }
 
 function mapStateToProps (state) {
     return {
-        favorites: state.favorites
+        favorites: state.favorites.recepies
     }
 }
 

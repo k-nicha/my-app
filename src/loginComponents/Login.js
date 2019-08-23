@@ -1,5 +1,4 @@
 import React from 'react'
-import store, {saveUsername} from '../redux/store'
 import LoggedInAs from './LoggedInAs.js'
 
 class Login extends React.Component {
@@ -34,7 +33,6 @@ class Login extends React.Component {
                 id='password' placeholder='password' type='password'/>
             <br />
             <button
-                onClick={() => store.dispatch(saveUsername(this.state.username))}
                 id='login'>
                 Log In
             </button>

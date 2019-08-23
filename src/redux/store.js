@@ -1,27 +1,11 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux'
+import { createStore, applyMiddleware,
+    combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
-
-export function saveUsername (username) {
-    return function (dispatch) {
-        dispatch({
-            type: 'SAVE_USERNAME',
-            payload: username
-        })
-    }
-}
-
-function usernameReducer (state = {usernameReducer: ''}, action) {
-    if (action.type === 'SAVE_USERNAME') {
-        // return Object.assign({}, state, action.payload)
-        return {...state, usernameReducer: action.payload}
-    } else {
-        return state
-    }
-}
+import { favoritesReducer } from './favoritesReducer'
 
 const rootReducer = combineReducers({
-    usernameReducer
+    favorites: favoritesReducer
 })
 
 // create store object by combining the reducers

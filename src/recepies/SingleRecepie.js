@@ -1,9 +1,12 @@
 import React from 'react'
 import store from '../redux/store.js'
+import { addItemToFavorites }
+    from
+    '../redux/favoritesActions' 
 
 export default class SingleRecepie extends React.Component {
     addToFavorites = () => {
-        store.dispatch(addItemToFavorites(this.props.key))
+        store.dispatch(addItemToFavorites(this.props.description))
     }
 
     render () {
