@@ -6,3 +6,12 @@ export function addItemToFavorites (item) {
         })
     }
 }
+
+export function removeItemFromFavorites (id) {
+    return function (dispatch) {
+        dispatch({
+            type: 'REMOVE_ITEM_FROM_FAVORITES',
+            payload: id
+        })
+    }
+}

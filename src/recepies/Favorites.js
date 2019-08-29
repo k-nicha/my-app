@@ -4,10 +4,13 @@ import { connect } from 'react-redux'
 
 const Favorites = (props) => {
     let emptyList = ''
-    const components = props.favorites.map((element) => {
+    let array = JSON.parse(localStorage.favorites)
+    const components = array.map((element) => {
         return <SingleRecepie
-            key={element.id}
-            description={element.title}
+            action='remove'
+            key={element.key}
+            id={element.key}
+            description={element.description}
         />
     })
 
@@ -21,7 +24,7 @@ const Favorites = (props) => {
     </div>
 }
 
-function mapStateToProps (state) {
+function mapStateToProps (state, ownProps) {
     return {
         favorites: state.favorites.recepies
     }

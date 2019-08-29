@@ -31,7 +31,9 @@ class Recepies extends React.Component {
     render () {
         const components = this.props.recepies.map((element) => {
             return <SingleRecepie
+                action='add'
                 key={element.id}
+                id={element.id}
                 description={element.title}
             />
         })
