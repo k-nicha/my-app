@@ -6,6 +6,8 @@ import Menu from './Menu.js'
 import LoggedInAs from './loginComponents/LoggedInAs.js'
 import Favorites from './recepies/Favorites.js'
 import Recepies from './recepies/Recepies.js'
+import Search from './Search.js'
+import Results from './Results.js'
 
 const Routes = () => {
     return (
@@ -13,6 +15,17 @@ const Routes = () => {
             <Menu />
             <Switch>
                 <Route exact path='/' component={Recepies} />
+                <Route 
+                    exact 
+                    path='/search'
+                    render={ (props) =>
+                        <React.Fragment>
+                            <Search >
+                                <Results {...props}/>
+                            </Search>
+                        </React.Fragment>
+                    }
+                />
                 <Route exact path='/fav' component={Favorites} />
                 <Route exact path='/login' component={Home} />
                 <Route exact path='/main' component={LoggedInAs} />

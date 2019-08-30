@@ -7,8 +7,8 @@ const Menu = () => {
         <li className='nav-item' id='home'>
             <Link className='nav-link' to='/'>Home</Link>
         </li>
-        <li className='nav-item' id='about'>
-            <Link className='nav-link' to='/about'>About</Link>
+        <li className='nav-item' id='search'>
+            <Link className='nav-link' to='/search'>Search</Link>
         </li>
         <li className='nav-item' id='contact'>
             <Link className='nav-link' to='/contact'>Contact</Link>
